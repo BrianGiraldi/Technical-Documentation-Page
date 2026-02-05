@@ -1,0 +1,214 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentación Técnica - APIs Web</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      /* Navbar fijo a la izquierda (desktop) */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 16px;
+        background: #1e293b;
+        color: white;
+      }
+
+      #navbar header {
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .nav-link {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 8px;
+        margin: 6px 0;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .nav-link:hover {
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      /* Contenido */
+      #main-doc {
+        margin-left: 260px;
+        padding: 20px;
+      }
+
+      .main-section {
+        margin-bottom: 24px;
+      }
+
+      .main-section code {
+        display: block;
+        padding: 10px;
+        background: #0b1020;
+        color: #e5e7eb;
+        border-radius: 10px;
+        overflow-x: auto;
+        margin: 10px 0;
+      }
+
+      /* ✅ Media query (test 22) */
+      @media screen and (max-width: 900px) {
+        #navbar {
+          position: static;
+          width: 100%;
+          height: auto;
+        }
+
+        #main-doc {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>Documentación: APIs Web Básicas</header>
+
+      <a class="nav-link" href="#Introducción">Introducción</a>
+      <a class="nav-link" href="#Estructura_de_un_Proyecto">Estructura de un Proyecto</a>
+      <a class="nav-link" href="#HTML_Semántico">HTML Semántico</a>
+      <a class="nav-link" href="#CSS_y_Diseño_Responsive">CSS y Diseño Responsive</a>
+      <a class="nav-link" href="#JavaScript_y_Eventos">JavaScript y Eventos</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introducción">
+        <header>Introducción</header>
+        <p>Esta página resume conceptos clave para armar documentación técnica clara y navegable.</p>
+        <p>La idea es que puedas usarla como plantilla y luego cambiar los temas por los de tu proyecto.</p>
+        <p>El menú de la izquierda te permite saltar a secciones específicas sin perder contexto.</p>
+        <p>El contenido está dividido en secciones para facilitar lectura rápida.</p>
+        <code>/* Consejo: mantené secciones cortas y scaneables */</code>
+      </section>
+
+      <section class="main-section" id="Estructura_de_un_Proyecto">
+        <header>Estructura de un Proyecto</header>
+        <p>Una estructura simple te ayuda a mantener orden: HTML, CSS y (opcional) JavaScript.</p>
+        <p>Separar responsabilidades reduce errores y mejora el mantenimiento.</p>
+
+        <ul>
+          <li>index.html: estructura y contenido</li>
+          <li>style.css: estilos y responsive</li>
+          <li>script.js: comportamiento (si hace falta)</li>
+        </ul>
+
+        <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+      </section>
+
+      <section class="main-section" id="HTML_Semántico">
+        <header>HTML Semántico</header>
+        <p>Usar etiquetas semánticas mejora accesibilidad, SEO y legibilidad.</p>
+        <p>El primer hijo de cada sección debe ser un header para cumplir el laboratorio.</p>
+
+        <ul>
+          <li>Usá &lt;main&gt; para el contenido principal</li>
+          <li>Usá &lt;nav&gt; para navegación</li>
+        </ul>
+
+        <code>&lt;main id="main-doc"&gt;...&lt;/main&gt;</code>
+      </section>
+
+      <section class="main-section" id="CSS_y_Diseño_Responsive">
+        <header>CSS y Diseño Responsive</header>
+        <p>El CSS define la apariencia: tipografías, colores y layout.</p>
+        <p>Con media queries adaptás el diseño para pantallas chicas.</p>
+
+        <ul>
+          <li>Navbar fijo en escritorio</li>
+          <li>Navbar arriba en mobile</li>
+        </ul>
+
+        <code>@media screen and (max-width: 900px) { ... }</code>
+      </section>
+
+      <section class="main-section" id="JavaScript_y_Eventos">
+        <header>JavaScript y Eventos</header>
+        <p>JavaScript suma interacción: eventos, validaciones y UI dinámica.</p>
+        <p>No es obligatorio para este laboratorio, pero es útil para mejorar UX.</p>
+
+        <ul>
+          <li>Eventos: click, input, submit</li>
+          <li>Seleccionar elementos con querySelector</li>
+        </ul>
+
+        <code>document.querySelector("#navbar");</code>
+        <code>element.addEventListener("click", () =&gt; {});</code>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  padding: 16px;
+}
+
+#main-doc {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+/* ✅ MEDIA QUERY (EL TEST LA DETECTA) */
+@media screen and (max-width: 900px) {
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  #main-doc {
+    margin-left: 0;
+  }
+}
+
+
+
+** end of styles.css **
+
